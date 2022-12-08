@@ -1,0 +1,1191 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Home</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
+.w3-row-padding img {margin-bottom: 12px}
+/* Set the width of the sidebar to 120px */
+.w3-sidebar {width: 120px;background: #222;}
+/* Add a left margin to the "page content" that matches the width of the sidebar (120px) */
+#main {margin-left: 120px}
+/* Remove margins from "page content" on small screens */
+@media only screen and (max-width: 600px) {#main {margin-left: 0}}
+</style>
+</head>
+<body class="w3-white" style="background-image:url(https://www.solidbackgrounds.com/images/1920x1080/1920x1080-light-blue-solid-color-background.jpg);">
+
+
+<!-- Icon Bar (Sidebar - hidden on small screens) -->
+<nav class="w3-sidebar w3-bar-block w3-small w3-hide-small w3-white w3-center">
+  <!-- Avatar image in top left corner -->
+  <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSpkZJpRk1jwGm02C3pVkBxyBXEq2KIUI1nei7-qoz6S65CPMsOm4RzeGZId8QfJ3ZALh0&usqp=CAU" style="width:100%">
+  <a href="#home" class="w3-bar-item w3-button w3-padding-large w3-white w3-hover-text-green">
+    <i class="fa fa-home w3-xxlarge"></i>
+    <p>HOME</p>
+  </a>
+  <a href="#about" class="w3-bar-item w3-button w3-padding-largew3-white w3-hover-text-green">
+    <i class="fa fa-user w3-xxlarge"></i>
+    <p>ABOUT</p>
+  </a>
+  <a href="#achievements" class="w3-bar-item w3-button w3-padding-large w3-white w3-hover-text-green">
+    <i class="fa fa-eye w3-xxlarge"></i>
+    <p>ACHIEVEMENTS</p>
+  </a>
+  <a href="#contact" class="w3-bar-item w3-button w3-padding-large w3-white w3-hover-text-green">
+    <i class="fa fa-envelope w3-xxlarge"></i>
+    <p>CONTACT</p>
+  </a>
+  <a href="{% url 'signup_page' %}" class="w3-bar-item w3-button w3-padding-large w3-white w3-hover-text-green">
+    <i class="fa fa-user w3-xxlarge"></i>
+    <p>Sign Up</p>
+  </a>
+  <a href="{% url 'tlogin' %}" class="w3-bar-item w3-button w3-padding-large w3-white w3-hover-text-green">
+    <i class="fa fa-user w3-xxlarge"></i>
+    <p>Log In</p>
+  </a>
+</nav>
+
+<!-- Navbar on small screens (Hidden on medium and large screens) -->
+<div class="w3-top w3-hide-large w3-hide-medium" id="myNavbar">
+  <div class="w3-bar w3-white w3-opacity w3-hover-opacity-off w3-center w3-small">
+    <a href="#home" class="w3-bar-item w3-button" style="width:25% !important">HOME</a>
+    <a href="#about" class="w3-bar-item w3-button" style="width:25% !important">ABOUT</a>
+    <a href="#achievements" class="w3-bar-item w3-button" style="width:25% !important">ACHIEVEMENTS</a>
+    <a href="#contact" class="w3-bar-item w3-button" style="width:25% !important">CONTACT</a>
+  </div>
+</div>
+
+<!-- Page Content -->
+<div class="w3-padding-large" id="home" style="background-image:url(https://images.unsplash.com/photo-1509062522246-3755977927d7?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1864&q=80);background-repeat: no-repeat;width:100%;">
+  <header class="w3-container w3-medium">
+    <p class="w3-right"><button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Signup</button>
+      <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">LogIn</button><br>
+    </p>
+  </header>
+  <div class="w3-display-middle w3-center"style="padding:24px 48px;margin-left:80px;">
+    
+  <span class="w3-text-white" style="font-size:80px;font-family: 'Times New Roman', Times, serif;"><span class="w3-padding w3-black w3-opacity-min"><b>Tuition Managment System</b></span></span>
+  
+
+</div>
+  <!-- Header/Home 
+ 
+<header class="w3-container w3-padding-32 w3-center w3-white" id="home">
+   
+     <div class="w3-display-middle w3-center"style="padding:24px 48px;margin-left:80px;">
+      <div class="w3-padding-large" id="main" style="background-image:url(https://images.unsplash.com/photo-1509062522246-3755977927d7?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1864&q=80);background-repeat: no-repeat;width:100%;">
+        <header class="w3-container w3-medium">
+          <p class="w3-right"><button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Open Modal</button>
+            <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Open Modal</button><br>
+          </p>
+        </header>
+ 
+        <span class="w3-text-white" style="font-size:80px;font-family: 'Times New Roman', Times, serif;"><span class="w3-padding w3-black w3-opacity-min"><b>Tuition Managment System</b></span>
+        
+  </div>
+-->
+
+  <!-- About Section --><br><br><br><br><br><br><br><br>
+  <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+  <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+  <br><br><br><br><br><br><br>
+
+  <div class="w3-content  w3-padding-100" id="about" style="background-image:url(https://www.solidbackgrounds.com/images/1920x1080/1920x1080-light-blue-solid-color-background.jpg);margin:auto">
+    <div class="flip-card">
+            <img src="https://www.poynter.org/wp-content/uploads/2019/03/shutterstock_446870920.jpg" alt="Avatar" style="width:850px;height:500px;">
+          </div>
+        
+            <h1 style="color:rgb(25, 0, 255);"></h1> <br><br>
+          
+            <p style="font-family: 'Times New Roman', Times, serif ;font-size:x-large;color:black;">   Excellent Tuition Center was Established in the year 1995,Solid Tuition has been instrumental in numerous success stories. 
+            Tuition classes are really helpful for students to overcome their weaknesses. Students benefit greatly as the tutors assist them to learn about various topics.
+               Home / Online tutors help the students to overcome their weaknesses in subjects in
+                which they struggle.
+    
+              In educational instructor works with you around the clock to create
+               a personalized curriculum and match you with an expert tutor that can
+                best enable your academic goals.This tuition will help them build confidence and hence speed up their learning process also be to identify their strengthness and weakness</p>
+      </div>
+    
+    <!-- Grid for pricing tables -->
+    <div class="w3-padding-34 w3-content w3-text-grey" id="achievements">
+      <div class="w3-row w3-container">
+           <h2 class="w3-center  w3-padding-16" style="color:blue;font-family: 'Times New Roman', Times, serif;"><b>SSLC FULL A+ WINNERS 2021-2022 BATCH</b></h2>
+         <div class="w3-col l3 m6 w3-light-grey w3-container w3-padding-16">
+           <img src="data:image/jpeg;base64,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" style="width:100%">
+           <p style="text-align:center;font-family: 'Times New Roman', Times, serif;"><b>Ashwaty Nair</b></p>
+         </div>
+     
+         <div class="w3-col l3 m6 w3-light-grey w3-container w3-padding-16">
+           <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTynexWy2gIrDOl7TEKPezmWzz9WBAVF3aaedDB9-oeYIo_kU350ZzQ2WqAjEZYwZf_Uk0&usqp=CAU" style="width: 100%;">
+           <p style="text-align:center;font-family: 'Times New Roman', Times, serif;"><b>Sona Paul</b></p>
+         </div>
+     
+         <div class="w3-col l3 m6 w3-light-grey w3-container w3-padding-16">
+           <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS1WdC1mgXxYYNBwkmOQ-ympzAfDK8tPw4MrGNRiGUzsSNv2IcxH6otIdTmycK2-oOYhYs&usqp=CAU" style="width: 100%;">
+           <p style="text-align:center;font-family: 'Times New Roman', Times, serif;"><b>Gayathri s Warrier</b></p>
+         </div>
+     
+         <div class="w3-col l3 m6 w3-light-grey w3-container w3-padding-16">
+           <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSRbO3bBBNG10pqmOZ8x_LRfXF8DUCFYSxOHc8EIpny1DJ08hu8TIW1FiYrWOh6-irhPuM&usqp=CAU" style="width: 100%;">
+           <p style="text-align:center;font-family: 'Times New Roman', Times, serif;"><b>Shiva Krishnan</b></p>
+         </div>
+         <br><br>
+           <h2 class="w3-center  w3-padding-16" style="color:blue;font-family: 'Times New Roman', Times, serif;"><b>PLUSTWO  FULL A+ WINNERS 2021-2022 BATCH</b></h2>
+         <br><br>
+         <div class="w3-col l3 m6 w3-light-grey w3-container w3-padding-16">
+           <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSELysaweqBYlOrk3qvMpAL2-W19YtTYdhKLT9b5ANGDhidXyRUMJNGdvAlfSdx3K3PaNA&usqp=CAU" style="width:100%">
+           <p style="text-align:center;font-family: 'Times New Roman', Times, serif;"><b>Akshay s</b></p>
+         </div>
+     
+         <div class="w3-col l3 m6 w3-light-grey w3-container w3-padding-16">
+           <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcROtkmD2iwTIbFuc5JtgD9zFKo0Uf04fO9MtRuEUn7Y0OUQ4vetN5Pn7YMQfEYAZAN5LuM&usqp=CAU" style="width: 100%;">
+           <p style="text-align:center;font-family: 'Times New Roman', Times, serif;"><b>Ashik M </b></p>
+         </div>
+     
+         <div class="w3-col l3 m6 w3-light-grey w3-container w3-padding-16">
+           <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR03WZKlN6vdREcWZ_-f66lmTjiAuCNm5FK4_kAm3bMMHSrOOfDnwslC1xEeZ9NgZ3VjbU&usqp=CAU" style="width: 100%;">
+           <p style="text-align:center;font-family: 'Times New Roman', Times, serif;"><b>Megha Suresh</b></p>
+         </div>
+     
+         <div class="w3-col l3 m6 w3-light-grey w3-container w3-padding-16">
+           <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTk9Wr6JNffDRu_UtxsUZ1wqzjOZaaTvrmuceOOmyQEf_1kiFeJ-Xue6IAv1igPnF-Hv64&usqp=CAU" style="width: 100%;">
+           <p style="text-align:center;font-family: 'Times New Roman', Times, serif;"><b>Sneha Thomas</b></p>
+         </div>
+       </div></div>
+    
+    <!-- End Grid/Pricing tables -->
+    </div>
+  
+ 
+
+  <!-- Contact Section -->
+  <div class="w3-row-padding  w3-content" id="contact">
+    <div class="w3-center w3-padding-64">
+      <span class="w3-xlarge w3-bottombar w3-border-dark-grey w3-padding-16">Contact Us</span>
+    </div>
+
+    <div class="w3-third w3-margin-bottom">
+      <div class="w3-card-4">
+        <img src="https://www.freepnglogos.com/uploads/whatsapp-logo-png-hd-2.png" alt="John" style="width:15%">
+        <div class="w3-container">
+          <h3>Whatsapp</h3>
+          <p>+91 87200 50069</p>
+       </div>
+      </div>
+    </div>
+
+    <div class="w3-third w3-margin-bottom">
+      <div class="w3-card-4">
+        <img src="https://cdn-icons-png.flaticon.com/512/281/281769.png" alt="Mike" style="width:15%">
+        <div class="w3-container">
+          <h3>Email</h3>
+          <p>Info@eExcellent Tuition.org</p>
+          </div>
+      </div>
+    </div>
+
+    <div class="w3-third w3-margin-bottom">
+      <div class="w3-card-4">
+        <img src="https://www.citypng.com/public/uploads/preview/-121610565690tuizfjgulq.png" alt="Jane" style="width:15%">
+        <div class="w3-container">
+          <h3>Phone</h3>
+         
+          <p>+91 77200 50066</p>
+         </div>
+      </div>
+    </div>
+  </div>
+  <br>
+  <br>
+
+<div class="w3-row-padding w3-content" >
+  <h2>Location</h2>
+  <p>Latitude: 8.61361, Longitude: 77.00243</p>
+  <p>Address: 3J7G+R36, Angady, Kothamangalam, Kerala 686691</p>
+  <iframe src="https://www.google.com/maps/embed?pb=!1m26!1m12!1m3!1d503262.8742995755!2d76.3595526171039!3d9.787951521263622!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m11!3e6!4m3!3m2!1d9.511325399999999!2d76.6921744!4m5!1s0x3b07e60e19bef731%3A0x2cf67f7bd4d3129d!2s3J7G%2BR36%20navodaya%20tuition%20centre%2C%20Angady%2C%20Kothamangalam%2C%20Kerala%20686691!3m2!1d10.064531299999999!2d76.6251295!5e0!3m2!1sen!2sin!4v1663842573213!5m2!1sen!2sin" width="800" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+</div>
+ 
+
+    <!-- Contact -->
+  
+  <!-- End Contact Section -->
+  </div>
+  
+    <!-- Footer -->
+  <footer class="w3-content w3-padding-64 w3-text-grey w3-xlarge">
+    <i class="fa fa-facebook-official w3-hover-opacity"></i>
+    <i class="fa fa-instagram w3-hover-opacity"></i>
+    <i class="fa fa-snapchat w3-hover-opacity"></i>
+    <i class="fa fa-pinterest-p w3-hover-opacity"></i>
+    <i class="fa fa-twitter w3-hover-opacity"></i>
+    <i class="fa fa-linkedin w3-hover-opacity"></i>
+    <p class="w3-medium">Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank" class="w3-hover-text-green">w3.css</a></p>
+  <!-- End footer -->
+  </footer>
+
+<!-- END PAGE CONTENT -->
+</div>
+
+</body>
+</html>
+
+##########################################################################3
+<!DOCTYPE html>
+<html>
+<head>
+<title>Home</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
+.w3-row-padding img {margin-bottom: 12px}
+/* Set the width of the sidebar to 120px */
+.w3-sidebar {width: 120px;background: rgb(18, 16, 16);}
+/* Add a left margin to the "page content" that matches the width of the sidebar (120px) */
+#main {margin-left: 120px}
+/* Remove margins from "page content" on small screens */
+@media only screen and (max-width: 600px) {#main {margin-left: 0}}
+</style>
+</head>
+<body class="w3-white" style="background-image:url(https://www.solidbackgrounds.com/images/1920x1080/1920x1080-light-blue-solid-color-background.jpg);">
+
+
+<!-- Icon Bar (Sidebar - hidden on small screens) -->
+<nav class="w3-sidebar w3-bar-block w3-small w3-hide-small w3-white w3-center">
+  <!-- Avatar image in top left corner -->
+  <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSpkZJpRk1jwGm02C3pVkBxyBXEq2KIUI1nei7-qoz6S65CPMsOm4RzeGZId8QfJ3ZALh0&usqp=CAU" style="width:100%">
+  <a href="#home" class="w3-bar-item w3-button w3-padding-large w3-white w3-hover-text-green">
+    <i class="fa fa-home w3-xxlarge"></i>
+    <p>HOME</p>
+  </a>
+  <a href="#about" class="w3-bar-item w3-button w3-padding-largew3-white w3-hover-text-green">
+    <i class="fa fa-user w3-xxlarge"></i>
+    <p>ABOUT</p>
+  </a>
+  <a href="#achievements" class="w3-bar-item w3-button w3-padding-large w3-white w3-hover-text-green">
+    <i class="fa fa-eye w3-xxlarge"></i>
+    <p>ACHIEVEMENTS</p>
+  </a>
+  <a href="#contact" class="w3-bar-item w3-button w3-padding-large w3-white w3-hover-text-green">
+    <i class="fa fa-envelope w3-xxlarge"></i>
+    <p>CONTACT</p>
+  </a>
+  <a href="{% url 'signup_page' %}" class="w3-bar-item w3-button w3-padding-large w3-white w3-hover-text-green">
+    <i class="fa fa-user w3-xxlarge"></i>
+    <p>Sign Up</p>
+  </a>
+  <a href="{% url 'tlogin' %}" class="w3-bar-item w3-button w3-padding-large w3-white w3-hover-text-green">
+    <i class="fa fa-user w3-xxlarge"></i>
+    <p>LogIn</p>
+  </a>
+</nav>
+
+<!-- Navbar on small screens (Hidden on medium and large screens) -->
+<div class="w3-top w3-hide-large w3-hide-medium" id="myNavbar">
+  <div class="w3-bar w3-white w3-opacity w3-hover-opacity-off w3-center w3-small">
+    <a href="#home" class="w3-bar-item w3-button" style="width:25% !important">HOME</a>
+    <a href="#about" class="w3-bar-item w3-button" style="width:25% !important">ABOUT</a>
+    <a href="#achievements" class="w3-bar-item w3-button" style="width:25% !important">ACHIEVEMENTS</a>
+    <a href="#contact" class="w3-bar-item w3-button" style="width:25% !important">CONTACT</a>
+  </div>
+</div>
+
+<!-- Page Content -->
+<div class="w3-padding-large" id="home" style="background-image:url(https://www.wallpapertip.com/wmimgs/49-493241_background-image-for-student-portal.jpg);background-repeat: no-repeat;width:100%;">
+  <header class="w3-container w3-medium">
+    
+  </header>
+  <div class="w3-display-middle w3-center"style="padding:24px 48px;margin-left:80px;">
+    
+  <span class="w3-text-white" style="font-size:80px;font-family: 'Times New Roman', Times, serif;"><span class="w3-padding w3-black w3-opacity-min"><b>Tuition Managment System</b></span></span>
+  
+ 
+</div> <br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br>
+
+
+  <div class="w3-content  w3-padding-100" id="about" style="background-image:url(https://www.solidbackgrounds.com/images/1920x1080/1920x1080-light-blue-solid-color-background.jpg);margin:auto">
+    <div class="flip-card">
+            <img src="https://www.poynter.org/wp-content/uploads/2019/03/shutterstock_446870920.jpg" alt="Avatar" style="width:850px;height:500px;">
+          </div>
+        
+            <h1 style="color:rgb(25, 0, 255);"></h1> <br><br>
+          
+            <p style="font-family: 'Times New Roman', Times, serif ;font-size:x-large;color:black;">   Excellent Tuition Center was Established in the year 1995,Solid Tuition has been instrumental in numerous success stories. 
+            Tuition classes are really helpful for students to overcome their weaknesses. Students benefit greatly as the tutors assist them to learn about various topics.
+               Home / Online tutors help the students to overcome their weaknesses in subjects in
+                which they struggle.
+    
+              In educational instructor works with you around the clock to create
+               a personalized curriculum and match you with an expert tutor that can
+                best enable your academic goals.This tuition will help them build confidence and hence speed up their learning process also be to identify their strengthness and weakness</p>
+      </div>
+    
+    <!-- Grid for pricing tables -->
+    <div class="w3-padding-34 w3-content w3-text-grey" id="achievements">
+      <div class="w3-row w3-container">
+           <h2 class="w3-center  w3-padding-16" style="color:blue;font-family: 'Times New Roman', Times, serif;"><b>SSLC FULL A+ WINNERS 2021-2022 BATCH</b></h2>
+         <div class="w3-col l3 m6 w3-light-grey w3-container w3-padding-16">
+           <img src="data:image/jpeg;base64,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" style="width:100%">
+           <p style="text-align:center;font-family: 'Times New Roman', Times, serif;"><b>Ashwaty Nair</b></p>
+         </div>
+     
+         <div class="w3-col l3 m6 w3-light-grey w3-container w3-padding-16">
+           <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTynexWy2gIrDOl7TEKPezmWzz9WBAVF3aaedDB9-oeYIo_kU350ZzQ2WqAjEZYwZf_Uk0&usqp=CAU" style="width: 100%;">
+           <p style="text-align:center;font-family: 'Times New Roman', Times, serif;"><b>Sona Paul</b></p>
+         </div>
+     
+         <div class="w3-col l3 m6 w3-light-grey w3-container w3-padding-16">
+           <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS1WdC1mgXxYYNBwkmOQ-ympzAfDK8tPw4MrGNRiGUzsSNv2IcxH6otIdTmycK2-oOYhYs&usqp=CAU" style="width: 100%;">
+           <p style="text-align:center;font-family: 'Times New Roman', Times, serif;"><b>Gayathri s Warrier</b></p>
+         </div>
+     
+         <div class="w3-col l3 m6 w3-light-grey w3-container w3-padding-16">
+           <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSRbO3bBBNG10pqmOZ8x_LRfXF8DUCFYSxOHc8EIpny1DJ08hu8TIW1FiYrWOh6-irhPuM&usqp=CAU" style="width: 100%;">
+           <p style="text-align:center;font-family: 'Times New Roman', Times, serif;"><b>Shiva Krishnan</b></p>
+         </div>
+         <br><br>
+           <h2 class="w3-center  w3-padding-16" style="color:blue;font-family: 'Times New Roman', Times, serif;"><b>PLUSTWO  FULL A+ WINNERS 2021-2022 BATCH</b></h2>
+         <br><br>
+         <div class="w3-col l3 m6 w3-light-grey w3-container w3-padding-16">
+           <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSELysaweqBYlOrk3qvMpAL2-W19YtTYdhKLT9b5ANGDhidXyRUMJNGdvAlfSdx3K3PaNA&usqp=CAU" style="width:100%">
+           <p style="text-align:center;font-family: 'Times New Roman', Times, serif;"><b>Akshay s</b></p>
+         </div>
+     
+         <div class="w3-col l3 m6 w3-light-grey w3-container w3-padding-16">
+           <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcROtkmD2iwTIbFuc5JtgD9zFKo0Uf04fO9MtRuEUn7Y0OUQ4vetN5Pn7YMQfEYAZAN5LuM&usqp=CAU" style="width: 100%;">
+           <p style="text-align:center;font-family: 'Times New Roman', Times, serif;"><b>Ashik M </b></p>
+         </div>
+     
+         <div class="w3-col l3 m6 w3-light-grey w3-container w3-padding-16">
+           <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR03WZKlN6vdREcWZ_-f66lmTjiAuCNm5FK4_kAm3bMMHSrOOfDnwslC1xEeZ9NgZ3VjbU&usqp=CAU" style="width: 100%;">
+           <p style="text-align:center;font-family: 'Times New Roman', Times, serif;"><b>Megha Suresh</b></p>
+         </div>
+     
+         <div class="w3-col l3 m6 w3-light-grey w3-container w3-padding-16">
+           <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTk9Wr6JNffDRu_UtxsUZ1wqzjOZaaTvrmuceOOmyQEf_1kiFeJ-Xue6IAv1igPnF-Hv64&usqp=CAU" style="width: 100%;">
+           <p style="text-align:center;font-family: 'Times New Roman', Times, serif;"><b>Sneha Thomas</b></p>
+         </div>
+       </div></div>
+    
+    <!-- End Grid/Pricing tables -->
+    </div>
+  
+ 
+
+  <!-- Contact Section -->
+  <div class="w3-row-padding  w3-content" id="contact">
+    <div class="w3-center w3-padding-64">
+      <span class="w3-xlarge w3-bottombar w3-border-dark-grey w3-padding-16">Contact Us</span>
+    </div>
+
+    <div class="w3-third w3-margin-bottom">
+      <div class="w3-card-4">
+        <img src="https://www.freepnglogos.com/uploads/whatsapp-logo-png-hd-2.png" alt="John" style="width:15%">
+        <div class="w3-container">
+          <h3>Whatsapp</h3>
+          <p>+91 87200 50069</p>
+       </div>
+      </div>
+    </div>
+
+    <div class="w3-third w3-margin-bottom">
+      <div class="w3-card-4">
+        <img src="https://cdn-icons-png.flaticon.com/512/281/281769.png" alt="Mike" style="width:15%">
+        <div class="w3-container">
+          <h3>Email</h3>
+          <p>Info@eExcellent Tuition.org</p>
+          </div>
+      </div>
+    </div>
+
+    <div class="w3-third w3-margin-bottom">
+      <div class="w3-card-4">
+        <img src="https://www.citypng.com/public/uploads/preview/-121610565690tuizfjgulq.png" alt="Jane" style="width:15%">
+        <div class="w3-container">
+          <h3>Phone</h3>
+         
+          <p>+91 77200 50066</p>
+         </div>
+      </div>
+    </div>
+  </div>
+  <br>
+  <br>
+
+<div class="w3-row-padding w3-content" >
+  <h2>Location</h2>
+  <p>Latitude: 8.61361, Longitude: 77.00243</p>
+  <p>Address: 3J7G+R36, Angady, Kothamangalam, Kerala 686691</p>
+  <iframe src="https://www.google.com/maps/embed?pb=!1m26!1m12!1m3!1d503262.8742995755!2d76.3595526171039!3d9.787951521263622!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m11!3e6!4m3!3m2!1d9.511325399999999!2d76.6921744!4m5!1s0x3b07e60e19bef731%3A0x2cf67f7bd4d3129d!2s3J7G%2BR36%20navodaya%20tuition%20centre%2C%20Angady%2C%20Kothamangalam%2C%20Kerala%20686691!3m2!1d10.064531299999999!2d76.6251295!5e0!3m2!1sen!2sin!4v1663842573213!5m2!1sen!2sin" width="800" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+</div>
+ 
+
+    <!-- Contact -->
+  
+  <!-- End Contact Section -->
+  </div>
+  
+    <!-- Footer -->
+  <footer class="w3-content w3-padding-64 w3-text-grey w3-xlarge">
+    <i class="fa fa-facebook-official w3-hover-opacity"></i>
+    <i class="fa fa-instagram w3-hover-opacity"></i>
+    <i class="fa fa-snapchat w3-hover-opacity"></i>
+    <i class="fa fa-pinterest-p w3-hover-opacity"></i>
+    <i class="fa fa-twitter w3-hover-opacity"></i>
+    <i class="fa fa-linkedin w3-hover-opacity"></i>
+    <p class="w3-medium">Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank" class="w3-hover-text-green">w3.css</a></p>
+  <!-- End footer -->
+  </footer>
+
+<!-- END PAGE CONTENT -->
+</div>
+
+</body>
+</html>
+
+<!--
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>W3.CSS Template</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>h1{color:rgb(28, 118, 18);
+font-family: 'Times New Roman', Times, serif ;
+font-size:300%;}
+html,body,h2,h3,h4 {font-family: 'Times New Roman', Times, serif ;background-color:white;}
+.mySlides {display:none}
+.w3-tag, .fa {cursor:pointer}
+.w3-tag {height:15px;width:15px;padding:0;margin-top:6px;color:white;}
+.flip-card {
+  background-color: transparent;
+  width: 1000px;
+  height: 500px;
+  perspective: 1000px;
+}
+
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+}
+
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  width: 1000px;
+  height: 500px;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.flip-card-front {
+  background-color: #bbb;
+  color: black;
+}
+
+.flip-card-back {
+  background-color: white;
+  color: rgb(22, 18, 18);
+  transform: rotateY(180deg);
+}
+</style>
+</head>
+<body>
+
+
+<div class="w3-top" s>
+  <div class="w3-row w3-large w3-light-grey">
+    <div class="w3-col s3">
+      <a href="#" class="w3-button w3-block">Home</a>
+    </div>
+    <div class="w3-col s3">
+      <a href="{% url 'signup_page' %}" class="w3-button w3-block">Sign Up</a>
+    </div>
+    <div class="w3-col s3">
+      <a href="{% url 'tlogin' %}" class="w3-button w3-block">Login</a>
+    </div>
+  </div>
+</div>
+
+<div class="w3-content" style="max-width:1100px;margin-top:80px;margin-bottom:80px">
+  <div class="w3-panel">
+    <h1><br><b>Excellent Tuition Center</b></h1>
+   <img src="https://logodesign.business/wp-content/uploads/2019/11/Education_Logo-22.jpg" height="20%" width="20%">
+  </div>ss="w3-display-container mySlides">
+      <img src="https://www.ei-ie.org/img/G9SKXMuRLkzmm69sFice52xAHMIK7SYb1Y1V4xsR.jpg?p=lead" style="width:100%">
+    </div>
+    
+
+  <div class="w3-container">
+    <div cla
+    <div class="w3-display-container mySlides">
+      <img src="https://img.freepik.com/premium-vector/cover-page-online-tuition-classes-template_262129-8207.jpg?w=2000" style="width:100%">
+      <div class="w3-display-middle w3-container w3-padding-32">
+      </div>
+
+    </div>
+    <div class="w3-display-container mySlides">
+<img src="https://www.smilefoundationindia.org/blog/wp-content/uploads/2019/01/powerful-education.jpg" style="width:100%">
+    </div>
+    <div class="w3-container w3-dark-grey w3-padding w3-xlarge">
+      <div class="w3-right" onclick="plusDivs(1)"><i class="fa fa-arrow-circle-right w3-hover-text-teal"></i></div>
+    
+      <div class="w3-center">
+        <span class="w3-tag demodots w3      <div class="w3-left" onclick="plusDivs(-1)"><i class="fa fa-arrow-circle-left w3-hover-text-teal"></i></div>
+-border w3-transparent w3-hover-white" onclick="currentDiv(1)"></span>
+        <span class="w3-tag demodots w3-border w3-transparent w3-hover-white" onclick="currentDiv(2)"></span>
+        <span class="w3-tag demodots w3-border w3-transparent w3-hover-white" onclick="currentDiv(3)"></span>
+      </div>
+    </div>
+  </div>Latest Update-date">
+                      <i cl</h3>
+    <marquee
+ <!-- <div class="slider-news">
+    <h3> direction="up" height="410px;">
+      <div class="news-block">
+          <div class="postass="fa fa-newspaper-o"></i>
+                  </div>
+          <div class="post-news">
+            <p>As per today’s news 10th &amp; 12th std classes expected to begins from 5th August.</p>
+          </div>
+        </div>
+        
+        <div class="news-block">
+          <div class="post-date">
+                      <i class="fa fa-newspaper-o"></i>
+                  </div>
+          <div class="post-news">
+            <p>As per today’s news 10th &amp; 12th std classes expected to begins from 5th August.</p>
+          </div>
+        </div>
+    </marquee>
+  </div>
+<br>
+  <div class="container">
+    
+    <div >
+      <marquee width="100%" direction="up" scrollamount="3" height="125px" style="text-align:center;background-color:#f8fdff;font-size:xx-large;color:rgb(255, 13, 0);font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;">
+        <div class="post-news">
+          <p><img src="https://www.kindpng.com/picc/m/154-1547142_transparent-calendar-icons-png-date-and-time-icon.png" height="3%" width="3%">
+          Career Guidance Class Dec 2nd & 3rd 10am , Venue: Seminar Hall, Speaker: Mr.Sony Jose </p>
+          <p><img src="https://www.kindpng.com/picc/m/154-1547142_transparent-calendar-icons-png-date-and-time-icon.png" height="3%" width="3%">Parents Meeting October14th ,  10am..</p>
+        </div>
+        </marquee></div>
+     </div>
+  <div class="w3-row w3-container">
+  
+  
+  <div class="w3-row w3-container">
+    <div class="w3-center w3-padding-64">
+      <span class="w3-xlarge w3-bottombar w3-border-dark-grey w3-padding-16">SSLC FULL A+ WINNERS 2021-2022 BATCH</span>
+    </div>
+    <div class="w3-col l3 m6 w3-light-grey w3-container w3-padding-16">
+      <img src="data:image/jpeg;base64,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" style="width:100%">
+      <p style="text-align:center;"><b>Ashwaty Nair</b></p>
+    </div>
+
+    <div class="w3-col l3 m6 w3-light-grey w3-container w3-padding-16">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTynexWy2gIrDOl7TEKPezmWzz9WBAVF3aaedDB9-oeYIo_kU350ZzQ2WqAjEZYwZf_Uk0&usqp=CAU" style="width: 100%;">
+      <p style="text-align:center;"><b>Sona Paul</b></p>
+    </div>
+
+    <div class="w3-col l3 m6 w3-light-grey w3-container w3-padding-16">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS1WdC1mgXxYYNBwkmOQ-ympzAfDK8tPw4MrGNRiGUzsSNv2IcxH6otIdTmycK2-oOYhYs&usqp=CAU" style="width: 100%;">
+      <p style="text-align:center;"><b>Gayathri s Warrier</b></p>
+    </div>
+
+    <div class="w3-col l3 m6 w3-light-grey w3-container w3-padding-16">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSRbO3bBBNG10pqmOZ8x_LRfXF8DUCFYSxOHc8EIpny1DJ08hu8TIW1FiYrWOh6-irhPuM&usqp=CAU" style="width: 100%;">
+      <p style="text-align:center;"><b>Shiva Krishnan</b></p>
+    </div><br><br>
+    <div class="w3-center w3-padding-64">
+      <span class="w3-xlarge w3-bottombar w3-border-dark-grey w3-padding-16">PLUSTWO  FULL A+ WINNERS 2021-2022 BATCH</span>
+    </div>
+    <div class="w3-col l3 m6 w3-light-grey w3-container w3-padding-16">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSELysaweqBYlOrk3qvMpAL2-W19YtTYdhKLT9b5ANGDhidXyRUMJNGdvAlfSdx3K3PaNA&usqp=CAU" style="width:100%">
+      <p style="text-align:center;"><b>Akshay s</b></p>
+    </div>
+
+    <div class="w3-col l3 m6 w3-light-grey w3-container w3-padding-16">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcROtkmD2iwTIbFuc5JtgD9zFKo0Uf04fO9MtRuEUn7Y0OUQ4vetN5Pn7YMQfEYAZAN5LuM&usqp=CAU" style="width: 100%;">
+      <p style="text-align:center;"><b>Ashik M </b></p>
+    </div>
+
+    <div class="w3-col l3 m6 w3-light-grey w3-container w3-padding-16">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR03WZKlN6vdREcWZ_-f66lmTjiAuCNm5FK4_kAm3bMMHSrOOfDnwslC1xEeZ9NgZ3VjbU&usqp=CAU" style="width: 100%;">
+      <p style="text-align:center;"><b>Megha Suresh</b></p>
+    </div>
+
+    <div class="w3-col l3 m6 w3-light-grey w3-container w3-padding-16">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTk9Wr6JNffDRu_UtxsUZ1wqzjOZaaTvrmuceOOmyQEf_1kiFeJ-Xue6IAv1igPnF-Hv64&usqp=CAU" style="width: 100%;">
+      <p style="text-align:center;"><b>Sneha Thomas</b></p>
+    </div>
+  </div>
+<br>
+<br><BR>
+
+  <!-- Grid
+  <div class="flip-card">
+    <div class="flip-card-inner">
+      <div class="flip-card-front">
+        <img src="https://www.poynter.org/wp-content/uploads/2019/03/shutterstock_446870920.jpg" alt="Avatar" style="width:850px;height:500px;">
+      </div>
+      <div class="flip-card-back">
+        <h1 style="color:rgb(25, 0, 255);">ABOUT US</h1> 
+        
+        <p style="font-family: 'Times New Roman', Times, serif ;font-size:x-large">Excellent Tuition Center was Established in the year 1995,Solid Tuition has been instrumental in numerous success stories. 
+          Tuition classes are really helpful for students to overcome their weaknesses .
+          Students benefit greatly as the tutors assist them to learn about various topics.
+           Home / Online tutors help the students to overcome their weaknesses in subjects in
+            which they struggle.
+
+          In educational instructor works with you around the clock to create
+           a personalized curriculum and match you with an expert tutor that can
+            best enable your academic goals</p>
+      </div>
+    </div>
+  </div>
+
+
+  
+
+  <!-- Grid 
+  <div class="w3-row-padding" id="about">
+    <div class="w3-center w3-padding-64">
+      <span class="w3-xlarge w3-bottombar w3-border-dark-grey w3-padding-16">Contact Us</span>
+    </div>
+
+    <div class="w3-third w3-margin-bottom">
+      <div class="w3-card-4">
+        <img src="https://www.freepnglogos.com/uploads/whatsapp-logo-png-hd-2.png" alt="John" style="width:25%">
+        <div class="w3-container">
+          <h3>Whatsapp</h3>
+          <p>+91 87200 50069</p>
+       </div>
+      </div>
+    </div>
+
+    <div class="w3-third w3-margin-bottom">
+      <div class="w3-card-4">
+        <img src="https://cdn-icons-png.flaticon.com/512/281/281769.png" alt="Mike" style="width:25%">
+        <div class="w3-container">
+          <h3>Email</h3>
+          <p>Info@eExcellent Tuition.org</p>
+          </div>
+      </div>
+    </div>
+
+    <div class="w3-third w3-margin-bottom">
+      <div class="w3-card-4">
+        <img src="https://www.citypng.com/public/uploads/preview/-121610565690tuizfjgulq.png" alt="Jane" style="width:25%">
+        <div class="w3-container">
+          <h3>Phone</h3>
+          <!--<p class="w3-opacity">Designer</p>
+          <p>+91 77200 50066</p>
+         </div>
+      </div>
+    </div>
+  </div>
+  <br>
+  <br>
+
+<div class="w3-row-padding" id="about">
+  <h2>Location</h2>
+  <p>Latitude: 8.61361, Longitude: 77.00243</p>
+  <p>Address: 3J7G+R36, Angady, Kothamangalam, Kerala 686691</p>
+  <iframe src="https://www.google.com/maps/embed?pb=!1m26!1m12!1m3!1d503262.8742995755!2d76.3595526171039!3d9.787951521263622!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m11!3e6!4m3!3m2!1d9.511325399999999!2d76.6921744!4m5!1s0x3b07e60e19bef731%3A0x2cf67f7bd4d3129d!2s3J7G%2BR36%20navodaya%20tuition%20centre%2C%20Angady%2C%20Kothamangalam%2C%20Kerala%20686691!3m2!1d10.064531299999999!2d76.6251295!5e0!3m2!1sen!2sin!4v1663842573213!5m2!1sen!2sin" width="800" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+</div>
+  <!-- Contact -->
+
+<!-- Footer
+
+<footer class="w3-container w3-padding-32 w3-light-grey w3-center">
+ 
+  <a href="#" class="w3-button w3-black w3-margin"><i class="fa fa-arrow-up w3-margin-right"></i>To the top</a>
+  <div class="w3-xlarge w3-section">
+    <i class="fa fa-facebook-official w3-hover-opacity"></i>
+    <i class="fa fa-instagram w3-hover-opacity"></i>
+    <i class="fa fa-snapchat w3-hover-opacity"></i>
+    <i class="fa fa-pinterest-p w3-hover-opacity"></i>
+    <i class="fa fa-twitter w3-hover-opacity"></i>
+    <i class="fa fa-linkedin w3-hover-opacity"></i>
+  </div>
+  <p><a href="https://www.w3schools.com/w3css/default.asp" title="W3.CSS" target="_blank" class="w3-hover-text-green"></a></p>
+</footer>
+
+
+<script>
+// Slideshow
+var slideIndex = 1;
+showDivs(slideIndex);
+
+function plusDivs(n) {
+  showDivs(slideIndex += n);
+}
+
+function currentDiv(n) {
+  showDivs(slideIndex = n);
+}
+
+function showDivs(n) {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("demodots");
+  if (n > x.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = x.length} ;
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";  
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" w3-white", "");
+  }
+  x[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " w3-white";
+}
+</script>
+
+</body>
+</html>
+
+
+<!DOCTYPE html>
+<html>
+	<head><meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!--<style>
+    body {
+      background: url('https://carriere.international/wp-content/uploads/2022/05/formularz-image-1-1366x790.jpg') fixed;
+     background-size: cover;
+ }
+ 
+ .form {
+     max-width: 530px;
+     padding:80px;
+     margin:auto;
+     border-radius: 0.3em;
+     background-color: #f2f2f2;
+     font-family: 'Times New Roman', Times, serif;
+     font-size:16px;
+     background-image:url("");
+ }
+ 
+ h2{ 
+     font-family:'Times New Roman', Times, serif;
+     font-size: 40px;
+     font-weight: 600;
+     color:black;
+     margin-top: 1%;
+     text-align: center;
+     text-transform: uppercase;
+     letter-spacing: 0.5px;
+ }
+ input{
+  border-radius:8px;
+  border:#f2f2f2;
+
+ }
+ 
+
+
+input[type=submit] {
+  background-color: #04AA6D;
+  color: white;
+}
+
+.container {
+  background-color: #f1f1f1;
+  padding: 20px;
+}
+
+#message {
+  display:none;
+  background: #f1f1f1;
+  color: #000;
+  position: relative;
+  padding: 20px;
+  margin-top: 10px;
+}
+
+#message p {
+  padding: 10px 35px;
+  font-size: 18px;
+}
+
+.valid {
+  color: green;
+}
+
+.valid:before {
+  position: relative;
+  left: -35px;
+  content: "✔";
+}
+
+
+.invalid {
+  color: red;
+}
+
+.invalid:before {
+  position: relative;
+  left: -35px;
+  content: "✖";
+}
+ 
+    </style>-->
+    <style>#bg {
+      background-image: url('img/background.jpg');
+      position: fixed;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background-size: cover;
+      filter: blur(5px);
+    }
+    
+    body {
+      font-family: 'Lato', sans-serif;
+      color: #4A4A4A;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      overflow: hidden;
+      margin: 0;
+      padding: 0;
+    }
+    
+    form {
+      width: 350px;
+      position: relative;
+    }
+    form .form-field::before {
+      font-size: 20px;
+      position: absolute;
+      left: 15px;
+      top: 17px;
+      color: #888888;
+      content: " ";
+      display: block;
+      background-size: cover;
+      background-repeat: no-repeat;
+    }
+    form .form-field:nth-child(1)::before {
+      background-image: url(img/user-icon.png);
+      width: 20px;
+      height: 20px;
+      top: 15px;
+    }
+    form .form-field:nth-child(2)::before {
+      background-image: url(img/lock-icon.png);
+      width: 16px;
+      height: 16px;
+    }
+    form .form-field {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+      justify-content: space-between;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center;
+      margin-bottom: 1rem;
+      position: relative;
+    }
+    form input {
+      font-family: inherit;
+      width: 100%;
+      outline: none;
+      background-color: #fff;
+      border-radius: 4px;
+      border: none;
+      display: block;
+      padding: 0.9rem 0.7rem;
+      box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16);
+      font-size: 17px;
+      color: #4A4A4A;
+      text-indent: 40px;
+    }
+    form .btn {
+      outline: none;
+      border: none;
+      cursor: pointer;
+      display: inline-block;
+      margin: 0 auto;
+      padding: 0.9rem 2.5rem;
+      text-align: center;
+      background-color: #47AB11;
+      color: #fff;
+      border-radius: 4px;
+      box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16);
+      font-size: 17px;
+    }</style>
+	</head>
+<body><div id="bg">
+  <nav class="navbar sticky-top navbar-light bg-grey" style="background-color: rgba(0,0,0,0.5);">
+    <div class="container-fluid" >
+      <a class="navbar-brand" href="{% url 'home' %}" style="color:white;font-size:23px;margin-left:13px;font-family: 'Times New Roman', Times, serif;text-decoration:none;padding: 6px;"> <img src="https://www.nicepng.com/png/full/335-3354019_white-home-button-icon-png-for-kids-white.png" style="width:1.5% ;">Home</a>
+    </div>
+  </nav>
+    <div class="container" style="background-image:url(https://carriere.international/wp-content/uploads/2022/05/formularz-image-1-1366x790.jpg);background-repeat: no-repeat;background-size:100%;">
+      <br><br>
+    </div>
+          <form class="form" role="form" action="{% url 'usercreate' %}" method="POST" enctype="multipart/form-data" >
+              {% csrf_token %}
+        
+              <h2>Registration</h2>
+              <div class="form-field">
+                   <input type="text" name="sid" placeholder="ID" class="form-control" autofocus>
+               </div>
+               <div class="form-field">
+                      <input type="text" name="firstname" placeholder="First Name" class="form-control" autofocus>
+                  </div>
+              </div>
+              <div class="form-group" style="padding:5px;">
+                   <div class="col-sm-9">
+                      <input type="text" name="lastname" placeholder="Last Name" class="form-control" autofocus>
+                  </div>
+              </div>
+              <div class="form-group" style="padding:5px;">
+                   <div class="col-sm-9">
+                      <input type="text" name="address" placeholder="Address" class="form-control" name= "address">
+                   </div>
+              </div>
+              <div class="form-group" style="padding:5px;">
+                   <div class="row">
+                        
+                    <div class="form-check form-check-inline">
+                      <input class="form-check-input" type="radio" name="gender" id="femaleGender"
+                        value="female" checked />
+                      <label class="form-check-label" for="femaleGender">Female</label>
+                    </div>
+  
+                    <div class="form-check form-check-inline">
+                      <input class="form-check-input" type="radio" name="gender" id="maleGender"
+                        value="male" />
+                      <label class="form-check-label" for="maleGender">Male</label>
+                    </div>
+  
+                    <div class="form-check form-check-inline">
+                      <input class="form-check-input" type="radio" name="gender" id="otherGender"
+                        value="others" />
+                      <label class="form-check-label" for="otherGender">Other</label>
+                    </div>
+                      
+                  </div>
+                </div>
+                <div class="form-group" style="padding:5px;">
+                    <div class="col-sm-9">
+                       <input type="number" name="age" placeholder="Age" class="form-control" >
+                   </div>
+                 </div>
+
+             <div class="form-group" style="padding:5px;">
+              <div class="col-sm-9">
+                <select class="form-control" style="color:rgb(27, 25, 25) ;" name="classes">
+                  <option type="text">Select class</option>
+
+                    {% for cs in cls %}
+
+                  <option type="text" value ='{{ cs.id }}'> {{ cs.classes}}</option>
+                  {% endfor %}
+                  </select> </div>
+            </div>
+            <!--<div class="form-group" style="padding:5px;">
+               <div class="col-sm-9">
+                  <input type="text" id="subjects" placeholder="subjects" class="form-control" name="subjects">
+              </div>
+            </div>-->
+              <div class="form-group" style="padding:5px;">
+                   <div class="col-sm-9">
+                      <input type="text" name="mobile" placeholder="mobile" class="form-control">
+                  </div>
+              </div>
+              <div class="form-group" style="padding:5px;">
+               <div class="col-sm-9">
+                <input type="email" id="myEmail" name="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" placeholder="Email">
+                </div>
+            </div>
+            <div class="form-group" style="padding:5px;">
+                <div class="col-sm-9">
+                <input type="file" name="image" class="form-control mt-3" accept="image/*">
+              </div>
+                    </div>
+               <div class="form-group" style="padding:5px;">
+            
+            <div class="col-sm-9">
+              <input type="text" name="username" class="form-control"placeholder="Username" />
+            </div>
+               </div>
+<!--<label>Length</label>
+               <select name="length" class="form-control">
+                 <option>8</option>
+                 <option>9</option>
+                 <option>10</option>
+                 <option>11</option>
+                 <option>12</option>
+                 <option>13</option>
+                 <option>14</option>
+                 <option>15</option>
+                 <option>16</option>
+               </select>
+               </div>
+               <div class="form-check">
+                 <input class="form-check-input" type="checkbox" name="uppercase">
+                 <label class="form-check-label">
+                   UpperCase
+                 </label>
+                   <br>
+                 <input class="form-check-input" type="checkbox" name="numbers">
+                 <label class="form-check-label">
+                   Numbers
+                 </label>
+                   <br>
+                 <input class="form-check-input" type="checkbox" name="special">
+                 <label class="form-check-label">
+                   Special
+                 </label>
+               </div>
+               <button class="btn btn-success" type="submit">Generate Password</button>
+
+               <h5 class="alert alert-success">Your Generatred Password: <strong>{{password}}</strong></h5>-->
+
+
+                   <div class="form-group" style="padding:5px;">
+                <div class="col-sm-9">
+                  <input type="password" id="psw" name="password" placeholder=" password" value="{{password}}">
+            <!--<input type="password" id="psw" name="password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters" required>
+            --> </div>
+              </div>
+     
+              <div class="form-group" style="padding:5px;">
+                  
+                  <div class="col-sm-9">
+                      <input type="password" id="password" placeholder="Confirm Password" name="cpassword" class="form-control" value="{{password}}">
+                  </div>
+              </div>
+             
+               <!-- /.form-group -->
+              <br><br>
+              <button type="submit" class="btn btn-primary btn-block" style="padding:5px;background-color:rgb(63, 110, 230);border:#f2f2f2;color: #f2f2f2;font-size:20px;">Register</button>
+              <button type="reset" value="Reset" style="padding:5px;background-color:rgb(231, 75, 78);border:#f2f2f2;color: #f2f2f2;font-size:20px;">Reset</button>
+            </form> <br><br><!-- /form -->
+
+           
+            
+
+
+
+      </div> <!-- ./container -->
+           
+      
+
+
+
+     
+      
+     
+                   
+     
+    </body>
+</html>
+<div id="message">
+  <h3>Password must contain the following:</h3>
+  <p id="letter" class="invalid">A <b>lowercase</b> letter</p>
+  <p id="capital" class="invalid">A <b>capital (uppercase)</b> letter</p>
+  <p id="number" class="invalid">A <b>number</b></p>
+  <p id="length" class="invalid">Minimum <b>8 characters</b></p>
+</div>
+                
+<script>
+var myInput = document.getElementById("psw");
+var letter = document.getElementById("letter");
+var capital = document.getElementById("capital");
+var number = document.getElementById("number");
+var length = document.getElementById("length");
+
+// When the user clicks on the password field, show the message box
+myInput.onfocus = function() {
+  document.getElementById("message").style.display = "block";
+}
+
+// When the user clicks outside of the password field, hide the message box
+myInput.onblur = function() {
+  document.getElementById("message").style.display = "none";
+}
+
+// When the user starts to type something inside the password field
+myInput.onkeyup = function() {
+  // Validate lowercase letters
+  var lowerCaseLetters = /[a-z]/g;
+  if(myInput.value.match(lowerCaseLetters)) {  
+    letter.classList.remove("invalid");
+    letter.classList.add("valid");
+  } else {
+    letter.classList.remove("valid");
+    letter.classList.add("invalid");
+  }
+  
+  // Validate capital letters
+  var upperCaseLetters = /[A-Z]/g;
+  if(myInput.value.match(upperCaseLetters)) {  
+    capital.classList.remove("invalid");
+    capital.classList.add("valid");
+  } else {
+    capital.classList.remove("valid");
+    capital.classList.add("invalid");
+  }
+
+  // Validate numbers
+  var numbers = /[0-9]/g;
+  if(myInput.value.match(numbers)) {  
+    number.classList.remove("invalid");
+    number.classList.add("valid");
+  } else {
+    number.classList.remove("valid");
+    number.classList.add("invalid");
+  }
+  
+  // Validate length
+  if(myInput.value.length >= 8) {
+    length.classList.remove("invalid");
+    length.classList.add("valid");
+  } else {
+    length.classList.remove("valid");
+    length.classList.add("invalid");
+  }
+}
+</script>

@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Log In</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
+<style>
+
+@import url('https://fonts.googleapis.com/css?family=Numans');
+
+html,body{
+
+background-size: cover;
+background-repeat: no-repeat;
+height: 100%;
+font-family: 'Numans', sans-serif;
+}
+
+.container{
+height: 100%;
+align-content: center;
+}
+
+.card{
+height: 370px;
+margin-top: auto;
+margin-bottom: auto;
+width: 400px;
+background-color: rgba(0,0,0,0.5) !important;
+}
+
+.social_icon span{
+font-size: 60px;
+margin-left: 10px;
+color: #FFC312;
+}
+
+.social_icon span:hover{
+color: white;
+cursor: pointer;
+}
+
+.card-header h3{
+color: white;
+}
+
+.social_icon{
+position: absolute;
+right: 20px;
+top: -45px;
+}
+
+.input-group-prepend span{
+width: 50px;
+background-color: #FFC312;
+color: black;
+border:0 !important;
+}
+
+input:focus{
+outline: 0 0 0 0  !important;
+box-shadow: 0 0 0 0 !important;
+
+}
+
+.remember{
+color: white;
+}
+
+.remember input
+{
+width: 20px;
+height: 20px;
+margin-left: 15px;
+margin-right: 5px;
+}
+
+.login_btn{
+color: black;
+background-color: #FFC312;
+width: 100px;
+}
+
+.login_btn:hover{
+color: black;
+background-color: white;
+}
+
+.links{
+color: white;
+}
+
+.links a{
+margin-left: 4px;
+}
+</style>
+<title>Login Page</title>
+<!--Made with love by Mutiullah Samim -->
+
+<!--Bootsrap 4 CDN-->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+ 
+ <!--Fontawesome CDN-->
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+
+<!--Custom styles-->
+<link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body style="background-image:url(https://www.icsi.edu/media/filer_public/8c/65/8c650152-d3eb-4ef1-888d-b248f20bfe20/student_3.jpg);
+">
+<nav class="navbar sticky-top navbar-light bg-grey" style="background-color: rgba(0,0,0,0.5);">
+  <div class="container-fluid" >
+    <a class="navbar-brand" href="{% url 'home' %}" style="color:white;font-size:20px;"> <span><i class="fas fa-home fa-lg">Home</a></i></span>
+  </div>
+</nav>
+          <div class="d-flex justify-content-center h-100">
+             <div class="card">
+   <div class="card-header">
+     <h3>LOG IN</h3>
+  
+   </div>
+   <div class="card-body">
+    <form class="form"  action="{% url 'SLogin' %}" method="POST"  >
+      {% csrf_token %}
+      <div class="mb-3">
+                         
+        <input type="text" id="fname" name="username"   class="form-control" placeholder="Username">
+     </div>
+     <div class="mb-3">
+       
+        <input type="password" id="fname" name="password"    class="form-control" placeholder="Password" >
+     </div>
+    
+      <div class="row align-items-center remember" style="text-align:center;">
+        <input type="checkbox">Remember Me
+      </div><br>
+      <div class="form-group" style="text-align:center;">
+        <input type="submit" value="Login" class="btn float-center login_btn" style="background-color:rgb(61, 92, 230);color: rgb(241, 225, 225);">
+        <input type="reset" value="Cancel" class="btn float-center login_btn" style="background-color:rgb(230, 61, 61);color: rgb(239, 231, 231);">
+      </div>
+    </form>
+   </div>
+   <div class="card-footer">
+     <div class="d-flex justify-content-center links">
+       Don't have an account?<a href="#">Sign Up</a>
+     </div>
+     <div class="d-flex justify-content-center">
+       <a href="#">Forgot your password?</a>
+     </div>
+   </div>
+ </div>
+</div>
+</div>
+</body>
+</html>
+<!--
+<body style="font-family: 'Times New Roman', Times, serif;text-align:center ;background-image:url(https://img.freepik.com/free-photo/back-school-background-with-school-supplies-copy-space_23-2148958977.jpg?w=2000);background-repeat: no-repeat;background-size:100%;">
+  
+<h1>Login Form</h1>
+
+<form action="{% url 'SLogin' %}" method="POST" style="display: inline-block;border:0px;" >
+  {% csrf_token %}
+  <div class="imgcontainer">
+    <img src="data:image/png;base64,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" alt="Avatar" class="avatar">
+  </div>
+
+  <div class="container-fluid">
+    <label for="uname"><b>Username</b></label>
+    <input type="text" placeholder="Enter Username" name="username" required>
+
+    <label for="psw"><b>Password</b></label>
+    <input type="password" placeholder="Enter Password" name="password" required>
+        
+    <button type="submit">Login</button>
+    <label>
+      <input type="checkbox" checked="checked" name="remember"> Remember me
+    </label>
+  </div>
+
+  <div class="container" style="background-color:#f1f1f1">
+    <button type="button" class="cancelbtn">Cancel</button>
+    <span class="psw">Forgot <a href="#">password?</a></span>
+  </div>
+</form>
+
+</body>
+</html>
+-->

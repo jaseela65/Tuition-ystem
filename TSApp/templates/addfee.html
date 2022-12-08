@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <title>Resume - Start Bootstrap Theme</title>
+    {% load static %}
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom fonts for this template -->
+    <link href="https://fonts.googleapis.com/css?family=Saira+Extra+Condensed:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i" rel="stylesheet">
+    <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+    <link href="vendor/devicons/css/devicons.min.css" rel="stylesheet">
+    <link href="vendor/simple-line-icons/css/simple-line-icons.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+   
+<style>
+     
+     body {
+  font-family: 'Open Sans', serif;
+  padding-top: 54px;
+  color: #868e96; }
+
+@media (min-width: 992px) {
+  body {
+    padding-top: 0;
+    padding-left: 17rem; } }
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Saira Extra Condensed', serif;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #f6fafe; }
+
+h1 {
+  font-size: 6rem;
+  line-height: 5.5rem; }
+
+h2 {
+  font-size: 3.5rem; }
+
+.subheading {
+  text-transform: uppercase;
+  font-weight: 500;
+  font-family: 'Saira Extra Condensed', serif;
+  font-size: 1.35rem; }
+
+.list-social-icons a {
+  color: #495057; }
+  .list-social-icons a:hover {
+    color: #38bdbd; }
+  .list-social-icons a .fa-lg {
+    font-size: 1.75rem; }
+
+.list-icons {
+  font-size: 3rem; }
+  .list-icons .list-inline-item i:hover {
+    color: #389cbd; }
+
+#sideNav .navbar-nav .nav-item .nav-link {
+  font-weight: 600;
+  text-transform: uppercase; }
+
+@media (min-width: 992px) {
+  #sideNav {
+    text-align: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    width: 17rem;
+    height: 100vh; }
+    .navbar-nav {
+      display: flex;
+      margin: auto auto 0;
+      padding: 0.5rem; }
+      .navbar-nav .navbar-brand .img-profile {
+        max-width: 10rem;
+        max-height: 10rem;
+        border: 0.5rem solid rgba(255, 255, 255, 0.2); }
+    #sideNav .navbar-collapse {
+      display: flex;
+      align-items: flex-start;
+      flex-grow: 0;
+      width: 100%;
+      margin-bottom: auto; }
+    .navbar-nav .navbar-collapse .navbar-nav {
+        flex-direction: column;
+        width: 100%; }
+        .navbar-nav .navbar-collapse .navbar-nav .nav-item {
+          display: block; }
+          .navbar-nav .navbar-collapse .navbar-nav .nav-item .nav-link {
+            display: block; } }
+
+section.resume-section {
+  border-bottom: 1px solid #dee2e6;
+  padding-top: 5rem !important;
+  padding-bottom: 5rem !important; }
+  section.resume-section .resume-item .resume-date {
+    min-width: none; }
+
+@media (min-width: 768px) {
+  section.resume-section {
+    min-height: 100vh; }
+    section.resume-section .resume-item .resume-date {
+      min-width: 18rem; } }
+
+@media (min-width: 992px) {
+  section.resume-section {
+    padding-top: 3rem !important;
+    padding-bottom: 3rem !important; } }
+
+.bg-primary {
+  background-color: #388ebd !important; }
+
+.text-primary {
+  color: #eceef0 !important; }
+
+a {
+  color: #38abbd; }
+  a:hover, a:focus, a:active {
+    color: #2410a5; }
+    .navbar li:hover, .a:hover  {
+  background-color:  #0c5b85;
+}
+input,select{
+  border-radius:8px;
+  border:#1f568e;
+  font-size:20px;
+  text-align: center;
+ }
+ .button {
+  background-color: #3590d5;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 14px;
+  margin: 2px 1px;
+  cursor: pointer;
+  border-radius: 8px;
+}
+
+input[type=text] ,input[type=date],input[type=number]{
+  width: 35%;
+  height: 40px;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  border: 2px solid #ccc;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  outline: none;
+  border-radius:8px;
+}
+
+input[type=text]:focus,input[type=date]:focus ,input[type=number]:focus{
+  border: 3px solid #555;
+  border-radius: 8px;
+}
+ select option[type=text] {
+  width: 80%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  border: 3px solid #ccc;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  outline: none;
+  border-radius:8px;
+}
+
+select option[type=text]:focus {
+  border: 3px solid #555;
+  border-radius: 8px;
+}
+    body{font-family:'Open Sans',serif;padding-top:54px;color:#868e96}
+    @media (min-width:992px){body{padding-top:0;padding-left:17rem}}
+    h1,h3,h4,h5,h6{font-family:'Saira Extra Condensed',serif;font-weight:700;text-transform:uppercase;color: #495057}h1{font-size:6rem;line-height:5.5rem}h2{font-size:3.5rem}.subheading{text-transform:uppercase;font-weight:500;font-family:'Saira Extra Condensed',serif;font-size:1.35rem}
+    .list-social-icons a{color:#495057;font-size: x-large;}.list-social-icons a:hover{color:#053b93}.list-social-icons a .fa-lg{font-size:1.75rem}.list-icons{font-size:7rem}.list-icons .list-inline-item i:hover{color:#4c38bd}#sideNav .navbar-nav .nav-item .nav-link{font-weight:600;text-transform:uppercase}@media (min-width:992px){#sideNav{text-align:center;position:fixed;top:0;left:0;display:flex;flex-direction:column;width:17rem;height:100vh}#sideNav .navbar-brand{display:flex;margin:auto auto 0;padding:.5rem}#sideNav .navbar-brand .img-profile{max-width:10rem;max-height:10rem;border:.5rem solid rgba(255,255,255,.2)}#sideNav .navbar-collapse{display:flex;align-items:flex-start;flex-grow:0;width:100%;margin-bottom:auto}#sideNav .navbar-collapse .navbar-nav{flex-direction:column;width:100%}#sideNav .navbar-collapse .navbar-nav .nav-item{display:block}#sideNav .navbar-collapse .navbar-nav .nav-item .nav-link{display:block}}section.resume-section{border-bottom:1px solid #dee2e6;padding-top:5rem!important;padding-bottom:5rem!important}section.resume-section .resume-item .resume-date{min-width:none}@media (min-width:768px){section.resume-section{min-height:100vh}section.resume-section .resume-item .resume-date{min-width:18rem}}
+    @media (min-width:992px){section.resume-section{padding-top:3rem!important;padding-bottom:3rem!important}}.bg-primary{background-color:#388cbd!important}.text-primary{color:#2c94d5!important}a{color:white;text-decoration:none}a:active,a:focus,a:hover{color:#09335e}h2{font-family:'Saira Extra Condensed',serif;font-weight:700;text-transform:uppercase;color:#2c94d5}
+
+</style>
+  </head>
+
+  <body id="page-top" style="background-image:url(https://static.brusheezy.com/system/resources/previews/000/050/505/original/blue-abstract-bubble-background-photoshop-backgrounds.jpg);
+  background-repeat: no-repeat;background-size:100%;">
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top" style="background-color:#2f90c1;" id="sideNav">
+      <a class="navbar-brand js-scroll-trigger" href="#page-top">
+        <span class="d-none d-lg-block">
+          <img class="img-fluid img-profile rounded-circle mx-auto mb-2" src="https://campuscare.ca/images/btn_login.png"  alt="" style="max-width:10rem;
+          max-height: 10rem;
+          border: 0.5rem solid rgba(255, 255, 255, 0.2);
+          border-radius: 200px;">
+        </span>
+      </a>
+      
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav" >
+            <li class="nav-item active" style="color:white;" ><a href="{% url 'adminhome' %}">HOME</a>
+            </li><br>
+          <li class="nav-item" style="color:white;" ><a href="{% url 'cls' %}">ADD CLASS</a>
+          </li><br>
+          <li class="nav-item" style="color:white;" ><a href="{% url 'sbjt' %}">ADD SUBJECT</a>
+          </li><br>
+          <li class="nav-item" style="color:white;"><a  href="{% url 'tcr' %}">ADD TEACHERS</a>
+          </li><br>
+          <li class="nav-item" style="color:white;"><a href="{% url 'ats' %}">ADD ATTENDENCE</a>
+          </li><br>
+          <li class="nav-item active" style="color:white;background-color: #255cb4;"><a  href="{% url 'pyd' %}">ADD PAYMENTS</a>
+          </li><br>
+          <li class="nav-item " style="color:white;"><a  href="{% url 'rslt_page' %}">ADD RESULT</a>
+          </li><br>
+          <li class="nav-item" style="color:white;" ><a href="{% url 'showleaves' %}">LEAVE APPROVAL</a>
+          </li><br>
+          <li class="nav-item" style="color:white;" ><a href="{% url 'showstd' %}">SHOW STUDENTS</a>
+          </li><br>
+          <li class="nav-item" style="color:white;"><a  href="{% url 'showtcr' %}">SHOW TEACHERS</a>
+          </li><br>
+          <li class="nav-item" style="color:white;" ><a href="{% url 'SLogout' %}">LOGOUT</a>
+          </li><br>
+ 
+          
+        </ul>
+      </div>
+    </nav>
+
+    <div class="container-fluid p-0">
+
+      <section  id="about">
+        <div class="my-auto">
+          <h1 class="mb-0" style="text-align:center ;">TUITION
+            <span class="text-primary">MANAGMENT SYSTEM</span>
+          </h1>
+        </div>
+      </section>
+    </div>
+  
+  
+
+    <div class="col-sm-8 text-left"> 
+        <form  method="POST"  action="{% url 'add_fee' %}" style="text-align:center;position:absolute; left:700px; top:120px; background-color:transparent;border-radius:90px;">
+            {% csrf_token %}
+           
+                <div class="form-group row">
+                  <label class="label"> <p  style="font-size: 45px;margin-left: 100px;color: #2f90c1;font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;">PAYMENTS DETAILS</b><p>
+                </div>
+                <div class="form-group row">
+                  <div class="col-lm-2">
+                    <!--<select class="form-control" style="color:rgb(27, 25, 25) ;border: 2px solid #ccc;
+                    border-radius: 6px;width: 35%;height: 40px;" name="sid" placeholder="Student ID">                     
+                           <option type="text">Select Student ID</option>
+                          {% for cs in atns %}
+    
+                        <option type="text" value ='{{ cs.id }}'> {{ cs.sid }}</option>
+                        {% endfor %}
+                        </select>
+                          </div>
+                </div><br>-->
+                   <div class="form-group row">
+                            <div class="col-lm-2">
+                              <select class="form-control"  style="color:rgb(27, 25, 25) ;border: 2px solid #ccc;
+                              border-radius: 6px;width: 35%;height: 40px;" name="username">
+                                <option type="text">Select Student Name</option>
+                                
+                                  {% for s in u %}
+            
+                                    <option type="text" value ='{{ s.id }}'> {{ s.username }}</option>
+                                {% endfor %}
+                                </select></div>
+                   </div><br>
+                <div class="form-group row">
+                    <div class="col-lm-2">
+                        <input type="date" name="date"id="form3Example2" class="form-control" placeholder="Date"/>
+                    </div>
+                </div><br>
+                <div class="form-group row">
+                    <div class="col-lm-2">
+                        <input type="number" name="amount"id="form3Example2" class="form-control" placeholder="Amount"/>
+                    </div>
+                </div><br>
+                <div class="form-group row">
+                    <div class="col-lm-4">
+                        <select class="form-control" style="color:rgb(27, 25, 25) ;border: 2px solid #ccc;
+                        border-radius: 6px;width: 35%;height: 40px;" name="paid" placeholder="Select Payment">
+                            
+                            
+                            <option type="text" value ="paid">Yes</option>
+                            <option type="text" value ="Not paid">No</option>
+                            </select></div>
+                </div>
+                
+                <br>
+                
+            
+                <div class="form-group row">
+                    <label class="col-sm-1 col-form-label"></label>
+                    <div class="col-lm-2">
+                      <button  type="submit" class="button">Save</button>
+                    </div>
+                </div>
+            
+        </form>
+    </div>
+
+<!-- End page content -->
+</div>
+
+<script>
+// Script to open and close sidebar
+function w3_open() {
+  document.getElementById("mySidebar").style.display = "block";
+  document.getElementById("myOverlay").style.display = "block";
+}
+ 
+function w3_close() {
+  document.getElementById("mySidebar").style.display = "none";
+  document.getElementById("myOverlay").style.display = "none";
+}
+
+// Modal Image Gallery
+function onClick(element) {
+  document.getElementById("img01").src = element.src;
+  document.getElementById("modal01").style.display = "block";
+  var captionText = document.getElementById("caption");
+  captionText.innerHTML = element.alt;
+}
+
+</script>
+
+
+</body>
+</html>
+
+
